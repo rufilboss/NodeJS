@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Create an issue
         uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+        env:
+          GITHUB_TOKEN: ${{ secrets.DAILY_GITHUB_TOKEN }}
         with:
           assignees: "rufilboy"
           labels: "daily sync, node-learnings"
@@ -39,5 +41,4 @@ jobs:
             - [Continue your learning here](https://www.youtube.com/playlist?list=PLC3y8-rFHvwh8shCMHFA5kWxD9PaPwxaY)
           pinned: false
           close-previous: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.DAILY_GITHUB_TOKEN }}
+
