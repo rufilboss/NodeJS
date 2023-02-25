@@ -1,0 +1,43 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# GitHub recommends pinning actions to a commit SHA.
+# To get a newer version, you will need to update the SHA.
+# You can also reference a tag or branch, but the action may change without warning.
+
+name: Daily Node JS Learnings
+on:
+  schedule:
+    - cron: 00 09 * * *
+
+jobs:
+  create_issue:
+    name: Create an issue to track my NodeJS learning
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create an issue
+        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+        with:
+          assignees: "rufilboy"
+          labels: "daily sync, node-learnings"
+          title: "Daily sync"
+          body: |
+            ### Agenda
+
+            - [ ] Learn with consistence!
+            - [ ] Write down what you've learnt TODAY!
+            - [ ] Did you learn any new things today?
+            - [ ] Did you meet any techie learning Node JS as you are?
+                    
+            ### Points
+            Add things you must finished learning tomorrow
+
+            - [Continue your learning here](https://www.youtube.com/playlist?list=PLC3y8-rFHvwh8shCMHFA5kWxD9PaPwxaY)
+          pinned: false
+          close-previous: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
