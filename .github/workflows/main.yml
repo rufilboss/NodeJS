@@ -10,7 +10,7 @@
 name: Daily Node JS Learnings
 on:
   schedule:
-    - cron: 00 09 * * *
+    - cron: 00 07 * * *
 
 jobs:
   create_issue:
@@ -38,6 +38,6 @@ jobs:
 
             - [Continue your learning here](https://www.youtube.com/playlist?list=PLC3y8-rFHvwh8shCMHFA5kWxD9PaPwxaY)
           pinned: false
-          close-previous: false
+          close-previous: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
