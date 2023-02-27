@@ -1,4 +1,4 @@
-// console.log("Hello ILYAS");
+console.log("Hello ILYAS");
 
 // First fucntion 
 
@@ -6,15 +6,8 @@
 //     return a + b
 // }
 
-// const helpers = require('./helpers');
+const { add } = require('./helpers');
 
-// const total = helpers.add(12, 12);
+const total = add(12, 12);
 
-// console.log("TOTAL:",total);
-
-// First web server 
-const { http } = require('http')
-
-const app = http.createServer
-
-app.listen(3000)
+console.log("TOTAL:",total);
