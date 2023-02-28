@@ -9,8 +9,10 @@
   "author": "Ilyas Rufai",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-validator": "^6.15.0",
     "mongoose": "^6.10.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20"

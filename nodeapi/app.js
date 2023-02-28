@@ -1,6 +1,7 @@
 const express = require('express')
 const morgon = require('morgan')
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 const app = express();
 const dotenv = require('dotenv')
 
@@ -20,14 +21,16 @@ const postRoutes  = require("./routes/post");
 const aboutRoutes = require("./routes/about");
 
 // Creating my own middleware
-const testmiddleware = (req, res, next) => {
-    console.log("Testing middleware")
-    next()
-};
+// const testmiddleware = (req, res, next) => {
+//     console.log("Testing middleware")
+//     next()
+// };
+// app.use(testmiddleware);
 
 app.use(morgon("dev"));
-app.use(testmiddleware);
+app.use(bodyParser.json());
 
+// Routers
 app.use("/", postRoutes);
 app.use("/about", aboutRoutes);
 
