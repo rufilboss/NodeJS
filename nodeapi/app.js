@@ -1,7 +1,8 @@
 const express = require('express')
 const morgon = require('morgan')
 const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const expressValidator = require('express-validator')
 const app = express();
 const dotenv = require('dotenv')
 
@@ -29,6 +30,7 @@ const aboutRoutes = require("./routes/about");
 
 app.use(morgon("dev"));
 app.use(bodyParser.json());
+app.use(expressValidator());
 
 // Routers
 app.use("/", postRoutes);
