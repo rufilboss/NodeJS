@@ -1,8 +1,8 @@
 const Post = require('../models/post')
 
 exports.getPost = (req, res) => {
-    const posts = Post.find().then(posts => {
-        res.json({posts: posts})
+    const posts = Post.find().select("_id title body").then(posts => {
+        res.json({ posts })
     })
     .cacht(err => console.log(err));
 };
