@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+
     - name: Today's date
       run: echo "TODAY=$(date '+%Y-%m-%d')" >> $GITHUB_ENV
 
@@ -34,5 +35,5 @@ jobs:
         close-previous: true
         linked-comments: true
         project-v2-path: users/jblew/projects/2
-      env: 
-        GITHUB_TOKEN: ${{ secrets.TOKEN }} # a personal access token with `project` scope
+    env: 
+      GITHUB_TOKEN: ${{ secrets.TOKEN }} # a personal access token with `project` scope
