@@ -35,5 +35,5 @@ jobs:
         close-previous: true
         linked-comments: true
         project-v2-path: users/jblew/projects/2
-    env: 
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # a personal access token with `project` scope
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # a personal access token with `project` scope
